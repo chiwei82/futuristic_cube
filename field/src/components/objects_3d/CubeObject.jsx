@@ -27,7 +27,7 @@ const CubeObject = forwardRef(function CubeObject(props, ref) {
         })
         mat.onBeforeCompile = (shader) => {
             shader.uniforms.uTime = { value: 0 }
-            shader.uniforms.custom_scale = { value: new THREE.Vector2( 1.0,  props.scale[1]) }
+            shader.uniforms.custom_scale = { value: new THREE.Vector2(  props.scale[0],  props.scale[1]) }
             materialRef.current = shader
 
             // Step 1: 宣告 vUv (插入 shader 頭部)
